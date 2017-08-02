@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import './style/loading.css'
 import VueI18n from 'vue-i18n'
+import EventBus from 'vue-event-plugin'
 
 import modalHelper from './plugins/modalHelper.js'
 import ajaxHelper from './plugins/ajaxHelper.js'
@@ -13,6 +14,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 Vue.use(VueI18n)
+Vue.use(EventBus)
 Vue.use(modalHelper)
 Vue.use(ajaxHelper)
 Vue.use(storageHelper)

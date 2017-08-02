@@ -51,6 +51,10 @@ export default {
     this.$Get('http://www.baidu.com').then(function (data) {
       console.log(data)
     })
+    this.$Event.one('test',function(){
+      alert(222)
+    })
+    this.$Event.trigger('test')
   }
 }
 </script>
