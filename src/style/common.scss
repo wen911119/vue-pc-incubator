@@ -1,0 +1,197 @@
+@import './function.scss';
+@import './var.scss';
+
+// 字体图标
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  font-size: 16px;
+
+}
+
+.icon-right{
+    @extend .iconfont;
+    &:after{
+        content: '\e626';
+    }
+}
+.icon-close{
+    @extend .iconfont;
+    &:after{
+        content: '\e62b';
+    }
+}
+
+.icon-add{
+    @extend .iconfont;
+    &:after{
+        content: '\e624';
+    }
+}
+
+.icon-search{
+    @extend .iconfont;
+    &:after{
+        content: '\e621';
+    }
+}
+
+
+// 分割线
+hr{
+    border: 0;
+    border-top: 1px solid #edeff4;
+    margin: 0;
+}
+
+// 上border
+.bd-1{
+    border: 0;    
+    border-top: 1px solid #edeff4;    
+}
+// 下border
+.bd-0-0-1{
+    border: 0;    
+    border-bottom: 1px solid #edeff4;    
+}
+// 上下border
+.bd-1-0-1{
+    border: 0;
+    border-top: 1px solid #edeff4;    
+    border-bottom: 1px solid #edeff4;    
+}
+
+// 文本
+.text36{
+    font-size: 36px;
+}
+.text32{
+    font-size: 32px;
+}
+
+.text30{
+    font-size: 30px;
+}
+
+.text28{
+    font-size: 28px;
+}
+
+.text26{
+    font-size: 26px;
+}
+
+.text24{
+    font-size: 24px;
+}
+
+.text22{
+    font-size: 22px;
+}
+
+// padding
+.pd-30{
+    padding: 30px;
+}
+.pd-0-30{
+    padding: 0 30px;
+}
+.pd-30-0{
+    padding: 30px 0;
+}
+.pd-24-30{
+    padding: 24px 30px;
+}
+.gutter{
+    height: 24px;
+    background-color: $fk-bgcolor;
+}
+
+
+// 状态
+.disable{
+    background-color: $fk-gray !important;
+    color: #fff !important;
+}
+
+.success{
+    color: $fk-green;
+}
+
+.normal{
+    color: $fk-blue;
+}
+
+.warning{
+    color: $fk-orange;
+}
+
+ .PENDING {
+    color: $fk-purple;
+}
+  .WITHDRAW {
+    color: #f08648;
+}
+  .RETREAT {
+    color: #eb4434;
+  }
+  .APPROVED {
+    color: #92c623;
+  }
+
+.gray{
+    color: $fk-gray;
+}
+
+
+// flex
+.flex{
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-v-center{
+    align-items: center;
+}
+
+.flex-h-center{
+    justify-content: center;
+}
+
+// 布局
+.v-c>*{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.v-c::after{
+    content:"";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.h-c{
+    text-align: center;
+}
+
+.place-holder{
+    color: #ccc;
+}

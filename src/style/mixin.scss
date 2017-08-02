@@ -1,0 +1,51 @@
+@import './function.scss';
+@import './var.scss';
+
+
+@mixin border($color){
+    border-radius: 1px solid $color;
+}
+
+@mixin ell() {
+    overflow: hidden;
+-ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin cell{
+    >div{
+        padding: 30px;    
+        border:1px solid #f8584f;
+    }
+    >hr{
+        color:#ccc;
+    }
+}
+
+
+@mixin button($color:#fff){
+    height: 80px;
+    line-height: 80px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 26px;
+    background-color: $color;
+    @if $color == #fff{
+        color: #808080;
+        border: 1px solid #bbb
+    }@else{
+        color: #fff;
+    }
+}
+
+@mixin badge($color:$fk-red){
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 36px;
+    text-align: center;
+    background-color: $color;
+    color: #fff;
+    border-radius: 100%;
+}
