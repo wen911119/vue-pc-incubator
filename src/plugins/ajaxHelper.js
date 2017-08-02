@@ -1,5 +1,5 @@
 import errorHelper from './errorHelper.js'
-import { ElLoading } from 'element-ui';
+import { Loading } from 'element-ui';
 
 import axios from 'axios'
 let Get, Post
@@ -9,7 +9,7 @@ Get = function (url, params, target) {
     let self = this
     return new Promise(function (resolve, reject) {
         let loadingOption = target ? { target: target, fullscreen: false } : {}
-        let instance = ElLoading.service(loadingOption)
+        let instance = Loading.service(loadingOption)
         axios.get(url, { params: params, headers: { 'token': token } }).then(function (response) {
             instance.close()
             if (response.data.status == 0) {
@@ -33,7 +33,7 @@ Post = function (url, params, target) {
     let self = this
     return new Promise(function (resolve, reject) {
         let loadingOption = target ? { target: target, fullscreen: false } : {}
-        let instance = ElLoading.service(loadingOption)
+        let instance = Loading.service(loadingOption)
 
         axios.post(url, params, { headers: { 'token': token } }).then(function (response) {
             self.$loading.hide()

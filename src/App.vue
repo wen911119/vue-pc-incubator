@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
@@ -13,7 +12,10 @@ export default {
 
 <style lang="scss">
 @import './style/common.scss';
-
+@import './style/normalize.css';
+html,body{
+  height: 100%;
+}
 @font-face {
   font-family: 'iconfont';
   src: url('./assets/iconfont.eot');
@@ -27,8 +29,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #333;
+  height: 100%;
 }
 </style>
