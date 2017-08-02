@@ -1,5 +1,5 @@
 import errorHelper from './errorHelper.js'
-import ElLoading from 'element-loading'
+import { ElLoading } from 'element-ui';
 
 import axios from 'axios'
 let Get, Post

@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './style/loading.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 import VueI18n from 'vue-i18n'
 import EventBus from 'vue-event-plugin'
 
@@ -13,6 +14,7 @@ import storageHelper from './plugins/storageHelper.js'
 import store from './store'
 
 Vue.config.productionTip = false
+Vue.use(ElementUI)
 Vue.use(VueI18n)
 Vue.use(EventBus)
 Vue.use(modalHelper)
