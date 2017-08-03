@@ -105,9 +105,15 @@ export default new Router({
           }
         },
         {
-          path: 'setting/flowManage',
+          path: 'setting/flowManage/index',
           component: function (resolve) {
-            require(['@/modules/setting/flowManage/app.vue'], resolve)
+            require(['@/modules/setting/flowManage/index/app.vue'], resolve)
+          }
+        },
+        {
+          path: 'setting/flowManage/detail',
+          component: function (resolve) {
+            require(['@/modules/setting/flowManage/detail/app.vue'], resolve)
           }
         },
         {
