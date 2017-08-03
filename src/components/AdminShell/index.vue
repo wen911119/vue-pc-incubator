@@ -1,12 +1,12 @@
 <template>
     <div class="admin-shell flex">
         <div class="left">
-            <left-menu :menu="menu"></left-menu>
+            <left-menu></left-menu>
     
         </div>
         <div class="right flex-1 flex flex-column">
             <div class="right-top">
-                <tabs @change="tabsChange"></tabs>
+                <tabs></tabs>
     
             </div>
             <div class="router-view flex-1">
@@ -20,15 +20,11 @@
 import Tabs from './top.vue'
 import LeftMenu from './left.vue'
 export default {
-    data() {
-        return {
-            menu: []
-        }
-    },
-    methods: {
-        tabsChange(menu) {
-            this.menu = menu
-        }
+    mounted() {
+        console.log(this.$route.path.split('/'))
+        let paths = this.$route.path.split('/')
+        this.$store.commit('UpdateTab', paths[2])        
+        this.$store.commit('UpdatePage', paths[3])
     },
     components: {
         Tabs,

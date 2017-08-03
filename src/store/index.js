@@ -5,6 +5,7 @@ import * as actions from './actions'
 import * as getters from './getters'
 import * as mutations from './mutations'
 import schedule from './modules/schedule'
+import appShell from './modules/appShell'
 
 Vue.use(Vuex)
 
@@ -19,7 +20,8 @@ export default new Vuex.Store({
     getters,
     mutations,
     modules: {
-        schedule
+        schedule,
+        appShell
     },
     strict: debug
 })

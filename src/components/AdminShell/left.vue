@@ -22,37 +22,27 @@
 
 <script>
 let logo = require('@/assets/logo.png')
+import { mapState, mapGetters } from 'vuex'
 export default {
-  props: ['menu'],
   data() {
     return {
-      logo: logo,
-      active: ''
+      logo: logo
     }
   },
   computed: {
-    tabKey: function () {
-      return this.$route.params.tab
-    }
+    ...mapState({
+      active: state => state.appShell.currentPage
+    }),
+    ...mapGetters({
+      menu: 'currentMenu',
+      url: 'url'
+    })
   },
-  mounted() {
-      console.log(this.$route, 4444444)
-      let paths = this.$route.path.split('/')
-      if (paths.length > 2) {
-        this.active = paths.pop()
-      }
-  },
-  watch: {
-    $route: function (to, from) {
-      let paths = to.path.split('/')
-      if (paths.length > 2) {
-        this.active = paths.pop()
-      }
-    }
-  },
+
   methods: {
     select(item) {
-      this.$router.push('/admin/' + this.tabKey + '/' + item.key)
+      this.$store.commit('UpdatePage', item.key)
+      this.$router.push(this.url)
     }
   }
 }
