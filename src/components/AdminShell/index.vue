@@ -21,7 +21,6 @@ import Tabs from './top.vue'
 import LeftMenu from './left.vue'
 export default {
     mounted() {
-        console.log(this.$route.path.split('/'))
         let paths = this.$route.path.split('/')
         this.$store.commit('UpdateTab', paths[2])        
         this.$store.commit('UpdatePage', paths[3])
