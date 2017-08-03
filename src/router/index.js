@@ -60,7 +60,7 @@ export default new Router({
             require(['@/components/Hello'], resolve)
           }
         },
-        // 图标tab
+        // 数据和报表tab
         {
           path: 'excel',
           component: function (resolve) {
