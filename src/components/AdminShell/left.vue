@@ -75,12 +75,16 @@ export default {
     .group-name {
       text-indent: 20px;
       color: #2697ff;
+      font-size: 14px;
     }
     .item {
       position: relative;
+      font-size: 14px;
       i {
         color: #fff;
+        opacity: 0.5;
         margin-left: 48px;
+        font-size: 14px;
       }
       span {
         position: absolute;
@@ -93,6 +97,9 @@ export default {
       }
       &.active {
         background-color: rgba(0, 0, 0, 0.3);
+        i{
+          opacity: 1;
+        }
         span {
           display: inline-block;
         }

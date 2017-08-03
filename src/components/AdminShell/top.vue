@@ -1,6 +1,6 @@
 <template>
-  <div class="tabs flex">
-    <div class="tab flex flex-column" @click="select(tab)" v-for="(tab,index) in tabs" :key="index" :class="{'active':tab.key==active}">
+  <div class="tabs flex flex-v-center">
+    <div class="tab flex flex-column flex-v-center" @click="select(tab)" v-for="(tab,index) in tabs" :key="index" :class="{'active':tab.key==active}">
       <i class="iconfont" v-html="tab.icon"></i>
       {{tab.name}}
     </div>
@@ -31,10 +31,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.active {
-  color: #2797ff;
-  i {
+.tabs {
+  height: 100%;
+  .tab{
+    width: 120px;
+    font-size: 12px;
+    color: #bbb;
+    i{
+      font-size: 26px;
+      margin-bottom: 6px;
+      color: #bbb;
+    }
+  }
+  .active {
     color: #2797ff;
+    i {
+      color: #2797ff;
+    }
   }
 }
 </style>

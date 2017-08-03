@@ -42,12 +42,16 @@ export default {
         color: #fff;
     }
     .right {
+        background-color: #f6f6f6;
         .right-top {
+            background-color: #fff;
             height: 80px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #e5e5e5;
         }
         .router-view {
             overflow: auto;
+            margin: 30px;
+            border:1px solid #e5e5e5;
         }
     }
 }
