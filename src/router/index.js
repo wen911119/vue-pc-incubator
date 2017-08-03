@@ -121,12 +121,6 @@ export default new Router({
           component: function (resolve) {
             require(['@/modules/setting/approveFlow/app.vue'], resolve)
           }
-        },
-        {
-          path: 'setting/hello15',
-          component: function (resolve) {
-            require(['@/components/Hello'], resolve)
-          }
         }
       ]
     },
