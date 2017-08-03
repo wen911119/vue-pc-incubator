@@ -102,22 +102,17 @@ const state = {
             icon: '&#xe642;',
             menu: [
                 {
-                    group: '企业设置',
+                    group: '流程管理',
                     items: [
                         {
-                            name: '财务信息',
-                            icon: '&#xe654;',
-                            key: 'hello13'
+                            name: '流程管理',
+                            icon: '&#xe657;',
+                            key: 'flowManage'
                         },
                         {
-                            name: '项目管理',
-                            icon: '&#xe65a;',
-                            key: 'hello14'
-                        },
-                        {
-                            name: '权限管理',
-                            icon: '&#xe655;',
-                            key: 'hello15'
+                            name: '审批流',
+                            icon: '&#xe658;',
+                            key: 'approveFlow'
                         }
                     ]
                 }

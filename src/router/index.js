@@ -105,15 +105,15 @@ export default new Router({
           }
         },
         {
-          path: 'setting/hello13',
+          path: 'setting/flowManage',
           component: function (resolve) {
-            require(['@/components/Hello'], resolve)
+            require(['@/modules/setting/flowManage/app.vue'], resolve)
           }
         },
         {
-          path: 'setting/hello14',
+          path: 'setting/approveFlow',
           component: function (resolve) {
-            require(['@/components/Hello'], resolve)
+            require(['@/modules/setting/approveFlow/app.vue'], resolve)
           }
         },
         {
